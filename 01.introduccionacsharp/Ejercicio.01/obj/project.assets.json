@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\CURSOS\\CSHARP\\01.introduccionacsharp\\Ejercicio.01\\Ejercicio.01.csproj",
-      "projectName": "Ejercicio.01",
-      "projectPath": "F:\\CURSOS\\CSHARP\\01.introduccionacsharp\\Ejercicio.01\\Ejercicio.01.csproj",
+      "projectUniqueName": "F:\\CURSOS\\CSHARP\\01.introduccionacsharp\\Ejercicio.01\\01.Intro.Ejercicio01.csproj",
+      "projectName": "01.Intro.Ejercicio01",
+      "projectPath": "F:\\CURSOS\\CSHARP\\01.introduccionacsharp\\Ejercicio.01\\01.Intro.Ejercicio01.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
       "outputPath": "F:\\CURSOS\\CSHARP\\01.introduccionacsharp\\Ejercicio.01\\obj\\",
       "projectStyle": "PackageReference",

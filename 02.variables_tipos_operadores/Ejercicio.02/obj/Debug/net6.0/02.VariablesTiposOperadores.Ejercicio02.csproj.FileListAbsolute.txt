@@ -1,0 +1,15 @@
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.exe
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.deps.json
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.runtimeconfig.json
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.dll
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.pdb
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.csproj.AssemblyReference.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.GeneratedMSBuildEditorConfig.editorconfig
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.AssemblyInfoInputs.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.AssemblyInfo.cs
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.csproj.CoreCompileInputs.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.dll
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\refint\02.VariablesTiposOperadores.Ejercicio02.dll
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.pdb
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio02.genruntimeconfig.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\02.VariablesTiposOperadores.Ejercicio02\obj\Debug\net6.0\ref\02.VariablesTiposOperadores.Ejercicio02.dll
