@@ -1,0 +1,15 @@
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.exe
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.deps.json
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.runtimeconfig.json
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.dll
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\bin\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.pdb
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.csproj.AssemblyReference.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.GeneratedMSBuildEditorConfig.editorconfig
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.AssemblyInfoInputs.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.AssemblyInfo.cs
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.csproj.CoreCompileInputs.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.dll
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\refint\02.VariablesTiposOperadores.Ejercicio03.dll
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.pdb
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\02.VariablesTiposOperadores.Ejercicio03.genruntimeconfig.cache
+F:\CURSOS\CSHARP\02.variables_tipos_operadores\Ejercicio.03\obj\Debug\net6.0\ref\02.VariablesTiposOperadores.Ejercicio03.dll
