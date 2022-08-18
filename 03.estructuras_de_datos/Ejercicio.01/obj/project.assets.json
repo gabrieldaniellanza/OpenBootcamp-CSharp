@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\CURSOS\\CSHARP\\03.estructuras_de_datos\\Ejercicio.01\\Ejercicio.01.csproj",
-      "projectName": "Ejercicio.01",
-      "projectPath": "F:\\CURSOS\\CSHARP\\03.estructuras_de_datos\\Ejercicio.01\\Ejercicio.01.csproj",
+      "projectUniqueName": "F:\\CURSOS\\CSHARP\\03.estructuras_de_datos\\Ejercicio.01\\03.EstructuraDeDatos.Ejercicio.01.csproj",
+      "projectName": "03.EstructuraDeDatos.Ejercicio.01",
+      "projectPath": "F:\\CURSOS\\CSHARP\\03.estructuras_de_datos\\Ejercicio.01\\03.EstructuraDeDatos.Ejercicio.01.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
       "outputPath": "F:\\CURSOS\\CSHARP\\03.estructuras_de_datos\\Ejercicio.01\\obj\\",
       "projectStyle": "PackageReference",
