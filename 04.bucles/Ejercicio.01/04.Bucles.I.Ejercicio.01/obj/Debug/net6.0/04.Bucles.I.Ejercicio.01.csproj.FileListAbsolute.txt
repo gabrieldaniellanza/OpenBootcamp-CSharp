@@ -1,0 +1,15 @@
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\bin\Debug\net6.0\04.Bucles.I.Ejercicio.01.exe
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\bin\Debug\net6.0\04.Bucles.I.Ejercicio.01.deps.json
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\bin\Debug\net6.0\04.Bucles.I.Ejercicio.01.runtimeconfig.json
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\bin\Debug\net6.0\04.Bucles.I.Ejercicio.01.dll
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\bin\Debug\net6.0\04.Bucles.I.Ejercicio.01.pdb
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.csproj.AssemblyReference.cache
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.GeneratedMSBuildEditorConfig.editorconfig
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.AssemblyInfoInputs.cache
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.AssemblyInfo.cs
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.csproj.CoreCompileInputs.cache
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.dll
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\refint\04.Bucles.I.Ejercicio.01.dll
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.pdb
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\04.Bucles.I.Ejercicio.01.genruntimeconfig.cache
+F:\CURSOS\CSHARP\04.bucles\Ejercicio.01\04.Bucles.I.Ejercicio.01\obj\Debug\net6.0\ref\04.Bucles.I.Ejercicio.01.dll
