@@ -11,11 +11,9 @@ Escribe una tabla de multiplicar del 1 al 10 para un número entero que recibe p
 Console.WriteLine("Ingrese el numero a multimplicar: ");
 int producto1 = int.Parse(Console.ReadLine());
 
-int producto2 = 1;
-do
+int producto2 = 0;
+while (producto2 < 10)
 {
-
-    Console.WriteLine($"{producto1} x {producto2} = {producto1 * producto2}");
     producto2++;
-
-} while (producto2 <= 10);
+    Console.WriteLine($"{producto1} x {producto2} = {producto1 * producto2}");
+};
