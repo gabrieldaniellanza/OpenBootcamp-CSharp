@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\05.bucles.II"
+    "\\05.bucles.II",
+    "\\05.bucles.II\\Ejercicio.02.SWITCH",
+    "\\05.bucles.II\\Ejercicio.02.SWITCH\\05.Bucles.Ejercicio.02.SWITCH"
   ],
-  "SelectedNode": "\\05.bucles.II\\Ejercicio.02.SWITCH",
+  "SelectedNode": "\\05.bucles.II\\Ejercicio.02.SWITCH\\05.Bucles.Ejercicio.02.SWITCH\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
