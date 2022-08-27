@@ -2,18 +2,18 @@
 
 namespace UniversityApiBachend.Models.DataModels
 {
-    public class User : BaseEntity
+    public class Student : BaseEntity
     {
         [Required, StringLength(50)]
-        public string Name { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
 
         [Required, StringLength(50)]
         public string LastName { get; set; } = string.Empty;
 
-        [Required, EmailAddress]
-        public string Email { get; set; } = string.Empty;
+        [Required]
+        public DateTime Dob { get; set; }
 
         [Required]
-        public string Password { get; set; } = string.Empty;
+        public ICollection<Course> Courses { get; set; } = new List<Course>();
     }
 }

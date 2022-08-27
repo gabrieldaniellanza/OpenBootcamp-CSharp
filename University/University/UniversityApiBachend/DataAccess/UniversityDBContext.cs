@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 using UniversityApiBachend.Models.DataModels;
 
 namespace UniversityApiBachend.DataAccess
@@ -13,5 +14,21 @@ namespace UniversityApiBachend.DataAccess
         public DbSet<User>? Users { get; set; }
 
         public DbSet<Curso>? Cursos { get; set; }
+
+        public DbSet<Course>? Courses { get; set; }
+        public DbSet<Category>? Categories { get; set; }
+
+        public DbSet<Student>? Students { get; set; }
+
+        public DbSet<Charpter>? Charpters { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Course>()
+                .HasOne(course => course.Charpter)
+                .WithOne(charpter => charpter.Course)
+                .HasForeignKey<Charpter>(charpter => charpter.CurseId);
+        }
+
     }
 }

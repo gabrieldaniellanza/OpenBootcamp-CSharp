@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UniversityApiBachend.DataAccess;
 
@@ -11,9 +12,10 @@ using UniversityApiBachend.DataAccess;
 namespace UniversityApiBachend.Migrations
 {
     [DbContext(typeof(UniversityDBContext))]
-    partial class UniversityDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220827023256_New Table Charpter2")]
+    partial class NewTableCharpter2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -108,9 +110,6 @@ namespace UniversityApiBachend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CurseId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
@@ -134,9 +133,6 @@ namespace UniversityApiBachend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CurseId")
-                        .IsUnique();
-
                     b.ToTable("Charpters");
                 });
 
@@ -147,6 +143,9 @@ namespace UniversityApiBachend.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CharptersId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -191,6 +190,8 @@ namespace UniversityApiBachend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CharptersId");
 
                     b.ToTable("Courses");
                 });
@@ -396,21 +397,15 @@ namespace UniversityApiBachend.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Charpter", b =>
+            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Course", b =>
                 {
-                    b.HasOne("UniversityApiBachend.Models.DataModels.Course", "Course")
-                        .WithOne("Charpter")
-                        .HasForeignKey("UniversityApiBachend.Models.DataModels.Charpter", "CurseId")
+                    b.HasOne("UniversityApiBachend.Models.DataModels.Charpter", "Charpters")
+                        .WithMany()
+                        .HasForeignKey("CharptersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Course");
-                });
-
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Course", b =>
-                {
-                    b.Navigation("Charpter")
-                        .IsRequired();
+                    b.Navigation("Charpters");
                 });
 #pragma warning restore 612, 618
         }
