@@ -24,10 +24,10 @@ namespace UniversityApiBachend.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Course>()
+            /*modelBuilder.Entity<Course>()
                 .HasOne(course => course.Charpter)
-                .WithOne(charpter => charpter.Course)
-                .HasForeignKey<Charpter>(charpter => charpter.CurseId);
+                .WithOne(charpter => charpter.course)
+                .HasForeignKey<Charpter>(charpter => charpter.CurseId);*/
         }
 
     }

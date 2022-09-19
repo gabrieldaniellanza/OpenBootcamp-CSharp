@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBachend.DataAccess;
 using UniversityApiBachend.Models.DataModels;
+using UniversityApiBachend.Services;
 
 namespace UniversityApiBachend.Controllers
 {
@@ -16,9 +17,13 @@ namespace UniversityApiBachend.Controllers
     {
         private readonly UniversityDBContext _context;
 
-        public StudentsController(UniversityDBContext context)
+        // services
+        private readonly IStudentsService _studentsService;
+
+        public StudentsController(UniversityDBContext context, IStudentsService studentsService)
         {
             _context = context;
+            _studentsService = studentsService;
         }
 
         // GET: api/Students
@@ -48,6 +53,45 @@ namespace UniversityApiBachend.Controllers
             }
 
             return student;
+        }
+
+
+        // GET: api/Students/WhitNoCourses
+        [HttpGet("WhitNoCourses")]
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudentsWhitNoCourses()
+        {
+            if (_studentsService == null)
+            {
+                return NotFound();
+            }
+
+            var students = _studentsService.GetStudentsWhitNoCourses(_context);
+
+            if (students == null)
+            {
+                return NotFound();
+            }
+
+            return students.ToList();
+        }
+
+        // GET: api/Students/ForSpecificCourse/5
+        [HttpGet("ForSpecificCourse/{idCourse}")]
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudentsForSpecificCourse(int idCourse)
+        {
+            if (_studentsService == null)
+            {
+                return NotFound();
+            }
+
+            var students = _studentsService.GetStudentsForSpecificCourse(idCourse, _context);
+
+            if (students == null)
+            {
+                return NotFound();
+            }
+
+            return students.ToList();
         }
 
         // PUT: api/Students/5

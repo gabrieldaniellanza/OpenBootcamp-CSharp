@@ -32,7 +32,7 @@ namespace UniversityApiBachend.Models.DataModels
         public ICollection<Student> Students { get; set; } = new List<Student>();
 
         [Required]
-        public Charpter Charpter { get; set; } = new Charpter();
+        public ICollection<Charpter>  Charpters { get; set; } = new List<Charpter>();
 
     }
 }

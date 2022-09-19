@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBachend.DataAccess;
 using UniversityApiBachend.Models.DataModels;
+using UniversityApiBachend.Services;
 
 namespace UniversityApiBachend.Controllers
 {
@@ -16,9 +17,13 @@ namespace UniversityApiBachend.Controllers
     {
         private readonly UniversityDBContext _context;
 
-        public CharptersController(UniversityDBContext context)
+        // services
+        private readonly ICharptersService _charptersService;
+
+        public CharptersController(UniversityDBContext context, ICharptersService charptersService)
         {
             _context = context;
+            _charptersService = charptersService;
         }
 
         // GET: api/Charpters
@@ -48,6 +53,26 @@ namespace UniversityApiBachend.Controllers
             }
 
             return charpter;
+        }
+
+        // GET: api/Charpters/ForSpecificCourse/5
+        [HttpGet("ForSpecificCourse/{idCourse}")]
+        public async Task<ActionResult<IEnumerable<Charpter>>> GetCharptertForSpecificCourse(int idCourse)
+        {
+            if (_charptersService == null)
+            {
+                return NotFound();
+            }
+
+
+            var charpters = _charptersService.GetCharptertForSpecificCourse(idCourse, _context);
+
+            if (charpters == null)
+            {
+                return NotFound();
+            }
+
+            return charpters.ToList();
         }
 
         // PUT: api/Charpters/5
@@ -115,6 +140,7 @@ namespace UniversityApiBachend.Controllers
 
             return NoContent();
         }
+
 
         private bool CharpterExists(int id)
         {

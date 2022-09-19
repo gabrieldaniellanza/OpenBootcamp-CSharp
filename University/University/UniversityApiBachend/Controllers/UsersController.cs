@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBachend.DataAccess;
 using UniversityApiBachend.Models.DataModels;
+using UniversityApiBachend.Services;
 
 namespace UniversityApiBachend.Controllers
 {
@@ -16,9 +17,12 @@ namespace UniversityApiBachend.Controllers
     {
         private readonly UniversityDBContext _context;
 
-        public UsersController(UniversityDBContext context)
+        private readonly IUserService _userService;
+
+        public UsersController(UniversityDBContext context, IUserService _userService)
         {
             _context = context;
+            IUserService userService = _userService;
         }
 
         // GET: api/Users   https://localhost:7162/api/Users

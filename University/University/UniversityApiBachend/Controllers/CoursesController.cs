@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBachend.DataAccess;
 using UniversityApiBachend.Models.DataModels;
+using UniversityApiBachend.Services;
 
 namespace UniversityApiBachend.Controllers
 {
@@ -16,9 +17,13 @@ namespace UniversityApiBachend.Controllers
     {
         private readonly UniversityDBContext _context;
 
-        public CoursesController(UniversityDBContext context)
+        // services
+        private readonly ICoursesService _coursesService;
+
+        public CoursesController(UniversityDBContext context, ICoursesService coursesService)
         {
             _context = context;
+            _coursesService = coursesService;
         }
 
         // GET: api/Courses
@@ -49,6 +54,65 @@ namespace UniversityApiBachend.Controllers
 
             return course;
         }
+
+
+        // GET: api/Courses/ByCategory/5
+        [HttpGet("ByCategory/{idCategory}")]
+        public async Task<ActionResult<IEnumerable<Course>>> GetCoursesByCategory(int idCategory)
+        {
+            if (_coursesService == null)
+            {
+                return NotFound();
+            }
+
+            var courses = _coursesService.GetCoursesByCategory(idCategory, _context);
+
+            if (courses == null)
+            {
+                return NotFound();
+            }
+
+            return courses.ToList();
+        }
+
+        // GET: api/Courses/ByCategory/5
+        [HttpGet("ForSpecificStudent/{idStudent}")]
+        public async Task<ActionResult<IEnumerable<Course>>> GetCoursesForSpecificStudent(int idStudent)
+        {
+            if (_coursesService == null)
+            {
+                return NotFound();
+            }
+
+            var courses = _coursesService.GetCoursesForSpecificStudent(idStudent, _context);
+
+            if (courses == null)
+            {
+                return NotFound();
+            }
+
+            return courses.ToList();
+        }
+
+        // GET: api/Students/WithOutCharpter
+        [HttpGet("WithOutCharpter")]
+        public async Task<ActionResult<IEnumerable<Course>>> GetCoursesWithOutCharpter()
+        {
+            if (_coursesService == null)
+            {
+                return NotFound();
+            }
+
+            var courses = _coursesService.GetCoursesWithOutCharpter(_context);
+
+            if (courses == null)
+            {
+                return NotFound();
+            }
+
+            return courses.ToList();
+        }
+
 
         // PUT: api/Courses/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
