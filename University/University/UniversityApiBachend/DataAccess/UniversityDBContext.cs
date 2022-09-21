@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
-using UniversityApiBachend.Models.DataModels;
+using UniversityApiBackend.Models.DataModels;
 
-namespace UniversityApiBachend.DataAccess
+namespace UniversityApiBackend.DataAccess
 {
     public class UniversityDBContext : DbContext
     {

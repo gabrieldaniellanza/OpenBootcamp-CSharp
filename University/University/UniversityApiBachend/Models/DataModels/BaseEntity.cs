@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 
-namespace UniversityApiBachend.Models.DataModels
+namespace UniversityApiBackend.Models.DataModels
 {
     public class BaseEntity
     {

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using UniversityApiBachend.DataAccess;
+using UniversityApiBackend.DataAccess;
 
 #nullable disable
 
-namespace UniversityApiBachend.Migrations
+namespace UniversityApiBackend.Migrations
 {
     [DbContext(typeof(UniversityDBContext))]
     [Migration("20220827012626_BaseEntity add IsDeleted")]
@@ -24,7 +24,7 @@ namespace UniversityApiBachend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Curso", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Curso", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -90,7 +90,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("Cursos");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.User", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

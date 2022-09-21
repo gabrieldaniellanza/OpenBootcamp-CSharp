@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace UniversityApiBachend.Migrations
+namespace UniversityApiBackend.Migrations
 {
     public partial class CreateCursosTables : Migration
     {

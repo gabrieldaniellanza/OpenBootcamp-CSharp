@@ -1,4 +1,4 @@
-﻿namespace UniversityApiBachend.Services
+﻿namespace UniversityApiBackend.Services
 {
     public interface IUserService
     {

@@ -1,7 +1,7 @@
-﻿using UniversityApiBachend.DataAccess;
-using UniversityApiBachend.Models.DataModels;
+﻿using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.Models.DataModels;
 
-namespace UniversityApiBachend.Services
+namespace UniversityApiBackend.Services
 {
     public class CharptersService : ICharptersService
     {

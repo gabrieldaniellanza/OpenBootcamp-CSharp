@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "UniversityApiBachend": {
+    "UniversityApiBackend": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

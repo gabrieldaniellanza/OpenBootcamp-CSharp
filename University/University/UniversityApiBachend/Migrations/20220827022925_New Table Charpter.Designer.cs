@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using UniversityApiBachend.DataAccess;
+using UniversityApiBackend.DataAccess;
 
 #nullable disable
 
-namespace UniversityApiBachend.Migrations
+namespace UniversityApiBackend.Migrations
 {
     [DbContext(typeof(UniversityDBContext))]
     [Migration("20220827022925_New Table Charpter")]
@@ -54,7 +54,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("CourseStudent");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Category", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,7 +95,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Charpter", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Charpter", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -136,7 +136,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("Charpters");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Course", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -196,7 +196,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Curso", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Curso", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -262,7 +262,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("Cursos");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Student", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Student", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -312,7 +312,7 @@ namespace UniversityApiBachend.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.User", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -369,13 +369,13 @@ namespace UniversityApiBachend.Migrations
 
             modelBuilder.Entity("CategoryCourse", b =>
                 {
-                    b.HasOne("UniversityApiBachend.Models.DataModels.Category", null)
+                    b.HasOne("UniversityApiBackend.Models.DataModels.Category", null)
                         .WithMany()
                         .HasForeignKey("CategoriesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UniversityApiBachend.Models.DataModels.Course", null)
+                    b.HasOne("UniversityApiBackend.Models.DataModels.Course", null)
                         .WithMany()
                         .HasForeignKey("CoursesId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -384,22 +384,22 @@ namespace UniversityApiBachend.Migrations
 
             modelBuilder.Entity("CourseStudent", b =>
                 {
-                    b.HasOne("UniversityApiBachend.Models.DataModels.Course", null)
+                    b.HasOne("UniversityApiBackend.Models.DataModels.Course", null)
                         .WithMany()
                         .HasForeignKey("CoursesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UniversityApiBachend.Models.DataModels.Student", null)
+                    b.HasOne("UniversityApiBackend.Models.DataModels.Student", null)
                         .WithMany()
                         .HasForeignKey("StudentsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("UniversityApiBachend.Models.DataModels.Course", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Course", b =>
                 {
-                    b.HasOne("UniversityApiBachend.Models.DataModels.Charpter", "Charpters")
+                    b.HasOne("UniversityApiBackend.Models.DataModels.Charpter", "Charpters")
                         .WithMany()
                         .HasForeignKey("CharptersId")
                         .OnDelete(DeleteBehavior.Cascade)

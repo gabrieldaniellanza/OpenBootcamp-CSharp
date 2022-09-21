@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace UniversityApiBachend.Migrations
+namespace UniversityApiBackend.Migrations
 {
     public partial class NewTables : Migration
     {

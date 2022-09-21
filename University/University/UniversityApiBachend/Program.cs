@@ -1,8 +1,8 @@
 
 // 1. trabajar con entity framework
 using Microsoft.EntityFrameworkCore;
-using UniversityApiBachend.DataAccess;
-using UniversityApiBachend.Services;
+using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +14,11 @@ var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME)
 // 3. Contexto
 builder.Services.AddDbContext<UniversityDBContext>(options => options.UseSqlServer(connectionString));
 
+// TODO: 7. Add sevice of JWT Autorization
+//builder.Services.AddJwtTokenServices(builder.Configuration);
+
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 
 // 4. add custom services (folder services)
@@ -32,7 +34,12 @@ builder.Services.AddScoped<IUserService, UserServices>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+
+// 8. TODO: Config Swagger to take care of Autorization of JWT
+
 builder.Services.AddSwaggerGen();
+
 
 // 5. CORS configuration
 builder.Services.AddCors(options =>
