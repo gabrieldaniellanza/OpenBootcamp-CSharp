@@ -75,6 +75,7 @@ namespace UniversityApiBackend.Helpers
                 userToken.Token = new JwtSecurityTokenHandler().WriteToken(jwtToken);
                 userToken.UserName = model.UserName;
                 userToken.Id = model.Id;
+                userToken.EmailId = model.EmailId;
                 userToken.GuidId = Id;
 
                 return userToken;

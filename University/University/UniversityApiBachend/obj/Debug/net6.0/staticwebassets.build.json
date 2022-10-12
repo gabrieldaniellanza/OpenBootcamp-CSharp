@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "vY7aQT9fXCuHiWiS9yQsDa/kpIetHNRSko8t+hpDQKo=",
-  "Source": "UniversityApiBachend",
-  "BasePath": "_content/UniversityApiBachend",
+  "Hash": "QPyS6tLT6zgAf8nMDTx7A6WH7kNPHKfQCfqIhArnZ40=",
+  "Source": "UniversityApiBackend",
+  "BasePath": "_content/UniversityApiBackend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
