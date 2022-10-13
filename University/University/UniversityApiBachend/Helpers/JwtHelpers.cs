@@ -18,11 +18,11 @@ namespace UniversityApiBackend.Helpers
                 new Claim(ClaimTypes.Expiration, DateTime.UtcNow.AddDays(1).ToString("MMM ddd dd yyyy HH:mm:ss tt"))
             };
 
-            if(userAccount.UserName == "Admin")
+            if(userAccount.UserName == "Gabriel")
             {
                 claims.Add(new Claim(ClaimTypes.Role, "Administrator"));
             } 
-            else if(userAccount.UserName == "User 1")
+            else
             {
                 claims.Add(new Claim(ClaimTypes.Role, "User"));
                 claims.Add(new Claim("UserOnly", "User 1"));

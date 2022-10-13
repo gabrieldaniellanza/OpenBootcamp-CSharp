@@ -17,12 +17,12 @@ namespace UniversityApiBackend.Controllers
     {
         private readonly UniversityDBContext _context;
 
-        private readonly IUserService _userService;
+        //private readonly IUserService? _userService;
 
-        public UsersController(UniversityDBContext context, IUserService _userService)
+        public UsersController(UniversityDBContext context)
         {
             _context = context;
-            IUserService userService = _userService;
+            //_userService = userService;
         }
 
         // GET: api/Users   https://localhost:7162/api/Users
