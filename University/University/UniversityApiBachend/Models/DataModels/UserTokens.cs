@@ -4,7 +4,9 @@
     {
         public int Id { get; set; }
         public string Token { get; set; } = String.Empty;
-        public string UserName{ get; set; } =String.Empty; 
+        public string UserName{ get; set; } = String.Empty;
+
+        public Roles Rol { get; set; }
 
         public TimeSpan Validity { get; set; }
 

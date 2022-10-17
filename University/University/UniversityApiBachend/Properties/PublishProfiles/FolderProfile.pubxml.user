@@ -8,4 +8,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <History>True|2022-09-06T00:10:57.6656141Z;</History>
     <LastFailureDetails />
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="Models/DataModels/User.cs">
+      <publishTime>10/12/2022 22:18:19</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

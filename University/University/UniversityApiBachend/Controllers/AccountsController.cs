@@ -90,7 +90,7 @@ namespace UniversityApiBackend.Controllers
                 return Ok(Token);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new Exception("GetToken Error");
             }

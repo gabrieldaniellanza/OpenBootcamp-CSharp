@@ -2,6 +2,12 @@
 
 namespace UniversityApiBackend.Models.DataModels
 {
+    public enum Roles
+    {
+        Administrador,
+        Usuario
+    }
+
     public class User : BaseEntity
     {
         [Required, StringLength(50)]
@@ -15,5 +21,8 @@ namespace UniversityApiBackend.Models.DataModels
 
         [Required]
         public string Password { get; set; } = string.Empty;
+
+        [Required]
+        public Roles Rol { get; set; }
     }
 }

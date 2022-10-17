@@ -15,19 +15,21 @@ namespace UniversityApiBackend.Helpers
                 new Claim(ClaimTypes.Name, userAccount.UserName),
                 new Claim(ClaimTypes.Email, userAccount.EmailId),
                 new Claim(ClaimTypes.NameIdentifier, Id.ToString()),
-                new Claim(ClaimTypes.Expiration, DateTime.UtcNow.AddDays(1).ToString("MMM ddd dd yyyy HH:mm:ss tt"))
+                new Claim(ClaimTypes.Expiration, DateTime.UtcNow.AddDays(1).ToString("MMM ddd dd yyyy HH:mm:ss tt")),
+                new Claim(ClaimTypes.Role, userAccount.Rol.ToString())
             };
 
-            if(userAccount.UserName == "Gabriel")
+            //claims.Add(new Claim(ClaimTypes.Role, userAccount.Rol.ToString()));
+
+            if (userAccount.Rol == Roles.Administrador)
             {
                 claims.Add(new Claim(ClaimTypes.Role, "Administrator"));
-            } 
+            }
             else
             {
                 claims.Add(new Claim(ClaimTypes.Role, "User"));
                 claims.Add(new Claim("UserOnly", "User 1"));
             }
-
 
             return claims;
         }

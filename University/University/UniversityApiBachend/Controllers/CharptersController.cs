@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -78,6 +81,7 @@ namespace UniversityApiBackend.Controllers
         // PUT: api/Charpters/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> PutCharpter(int id, Charpter charpter)
         {
             if (id != charpter.Id)
@@ -109,6 +113,7 @@ namespace UniversityApiBackend.Controllers
         // POST: api/Charpters
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<Charpter>> PostCharpter(Charpter charpter)
         {
           if (_context.Charpters == null)
@@ -123,6 +128,7 @@ namespace UniversityApiBackend.Controllers
 
         // DELETE: api/Charpters/5
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteCharpter(int id)
         {
             if (_context.Charpters == null)
