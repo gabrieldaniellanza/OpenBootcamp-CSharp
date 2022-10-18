@@ -261,3 +261,16 @@ F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\ref
 F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.pdb
 F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.genruntimeconfig.cache
 F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\ref\UniversityApiBackend.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\bin\Debug\net6.0\de-DE\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\bin\Debug\net6.0\en-US\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\bin\Debug\net6.0\es-ES\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\bin\Debug\net6.0\fr-FR\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.Resources.Controllers.AccountsController.de-DE.resources
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.Resources.Controllers.AccountsController.en-US.resources
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.Resources.Controllers.AccountsController.es-ES.resources
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.Resources.Controllers.AccountsController.fr-FR.resources
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\UniversityApiBackend.csproj.GenerateResource.cache
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\de-DE\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\en-US\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\es-ES\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\fr-FR\UniversityApiBackend.resources.dll

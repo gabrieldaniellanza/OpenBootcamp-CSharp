@@ -1,24 +1,31 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Controllers
 {
+
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class AccountsController : ControllerBase
     {
+
+        private readonly IStringLocalizer<AccountsController> _stringLocalizer;
+
         private readonly JwtSettings _jwtSettings;
 
         private readonly UniversityDBContext _context;
 
-        public AccountsController(UniversityDBContext context, JwtSettings jwtSettings)
+        public AccountsController(UniversityDBContext context, JwtSettings jwtSettings, IStringLocalizer<AccountsController> stringLocalizer)
         {
             _context = context;
             _jwtSettings = jwtSettings;
+            _stringLocalizer = stringLocalizer;
+
         }
 
         private readonly IEnumerable<User> Logins = new List<User>()
@@ -46,6 +53,8 @@ namespace UniversityApiBackend.Controllers
             try
             {
                 var Token = new UserTokens();
+                var Saludo = string.Empty;
+
                 if (_context.Users == null)
                 {
                     return NotFound();
@@ -58,6 +67,13 @@ namespace UniversityApiBackend.Controllers
                 var Valid = _context.Users.Any(
                                 user => user.Name.Equals(userLogins.UserName) &&
                                         user.Password.Equals(userLogins.Password));
+
+                var searchUser = (from user in _context.Users
+                                 where user.Name.Equals(userLogins.UserName) &&
+                                        user.Password.Equals(userLogins.Password)
+                                 select user).FirstOrDefault();
+
+                Console.WriteLine("User: {0}", searchUser);
 
                 if (Valid)
                 {
@@ -81,13 +97,19 @@ namespace UniversityApiBackend.Controllers
                             GuidId = Guid.NewGuid()
                         },
                         _jwtSettings);
+
+                    Saludo = _stringLocalizer.GetString("Hello!").Value ?? String.Empty;
                 }
                 else
                 {
                     return BadRequest("Wrong Password");
                 }
 
-                return Ok(Token);
+                return Ok( new
+                {
+                    Token,
+                    Saludo
+                });
 
             }
             catch (Exception)
@@ -101,7 +123,11 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public IActionResult GetUsersList()
         {
-            return Ok(Logins);
+
+            var searchUser = (from user in _context.Users
+                              select user);
+
+            return Ok(searchUser);
         }
     }
 }
