@@ -6,8 +6,11 @@ using UniversityApiBackend;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
+
+var builder = WebApplication.CreateBuilder(args);
 
 // 2. conexion con la base de datos
 const string CONNECTIONNAME = "UniversityDB";
@@ -31,6 +34,23 @@ builder.Services.AddScoped<ICharptersService, CharptersService>();
 builder.Services.AddScoped<ICoursesService, CoursesService>();
 builder.Services.AddScoped<IStudentsService, StudentsService>();
 builder.Services.AddScoped<IUserService, UserServices>();
+
+
+// ADD APP VERSIONING CONTROL
+builder.Services.AddApiVersioning(setup =>
+{
+    setup.DefaultApiVersion = new ApiVersion(1,0);
+    setup.AssumeDefaultVersionWhenUnspecified = true;
+    setup.ReportApiVersions = true;
+});
+
+// ADD CONFIGURATION TO DOCUMENT VERSIONS
+builder.Services.AddVersionedApiExplorer(setup =>
+{
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
+
 
 // add the rest of services
 
@@ -73,6 +93,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 // 5. CORS configuration
 builder.Services.AddCors(options =>
@@ -86,6 +107,11 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+//
+var apiversiondescriptionprovider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+
 
 // 02. IDIOMAS SOPORTADOS
 
@@ -103,10 +129,18 @@ app.UseRequestLocalization(localizationOptions);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-
     //app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        foreach (var description in apiversiondescriptionprovider.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint(
+                $"/swagger/{description.GroupName}/swagger.json",
+                description.GroupName.ToUpperInvariant()
+            );
+        }
+    });
 }
 
 app.UseHttpsRedirection();

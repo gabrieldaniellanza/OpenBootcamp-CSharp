@@ -274,3 +274,5 @@ F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\de-
 F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\en-US\UniversityApiBackend.resources.dll
 F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\es-ES\UniversityApiBackend.resources.dll
 F:\CURSOS\CSHARP\University\University\UniversityApiBachend\obj\Debug\net6.0\fr-FR\UniversityApiBackend.resources.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+F:\CURSOS\CSHARP\University\University\UniversityApiBachend\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

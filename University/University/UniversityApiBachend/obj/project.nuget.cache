@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WZXDiiVHMNPB0Nj0SnwEIxAqB7k5MaHqOydJVJPu+8AkcI0prAxYxrwfkism5c1UiIQqpa4fMqOHrzWr7/WPOQ==",
+  "dgSpecHash": "+5FU0Fiw9rMn1NBtNewBD2ti1eVOEuMEhgcxt/8QAHDgYKIdEhFsOUgv9dYtNL4jkHOFdpO8tTVJRL0oqhe9vQ==",
   "success": true,
   "projectFilePath": "F:\\CURSOS\\CSHARP\\University\\University\\UniversityApiBachend\\UniversityApiBackend.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\gabri\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.build\\17.0.0\\microsoft.build.17.0.0.nupkg.sha512",
