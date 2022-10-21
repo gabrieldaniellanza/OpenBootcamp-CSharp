@@ -177,3 +177,78 @@
 2022-10-21 18:17:37.592 -03:00 [INF] AccountsController - GetToken - Function Called
 2022-10-21 18:17:38.292 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
 2022-10-21 18:17:39.208 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1790.3675 ms
+2022-10-21 18:45:26.282 -03:00 [INF] AccountsController - MoveNext - Function Called
+2022-10-21 18:45:26.942 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 18:45:27.889 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1798.7868 ms
+2022-10-21 18:48:35.633 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:48:35.892 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 385.5473 ms
+2022-10-21 18:49:20.648 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:20.694 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 51.1833 ms
+2022-10-21 18:49:33.880 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:33.894 -03:00 [INF] HTTP GET /api/v1/Students responded 200 in 19.9810 ms
+2022-10-21 18:49:49.099 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:49.106 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 8.8806 ms
+2022-10-21 18:49:49.608 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:49.615 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.7509 ms
+2022-10-21 18:49:50.057 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:50.062 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 5.1036 ms
+2022-10-21 18:49:50.472 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:50.479 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.5803 ms
+2022-10-21 18:49:50.864 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:50.871 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.0369 ms
+2022-10-21 18:49:51.271 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:51.277 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 6.9704 ms
+2022-10-21 18:49:51.698 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:51.705 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.2279 ms
+2022-10-21 18:49:52.153 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:52.160 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 6.8209 ms
+2022-10-21 18:49:52.957 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:52.964 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 6.9845 ms
+2022-10-21 18:49:53.383 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:53.390 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.5999 ms
+2022-10-21 18:49:53.839 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:53.843 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 3.9486 ms
+2022-10-21 18:49:54.289 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:54.296 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.0410 ms
+2022-10-21 18:49:54.721 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:54.728 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.3337 ms
+2022-10-21 18:49:55.175 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:55.181 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.0129 ms
+2022-10-21 18:49:55.611 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:55.618 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.9214 ms
+2022-10-21 18:49:56.055 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:56.062 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.4142 ms
+2022-10-21 18:49:56.502 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:56.509 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 7.1863 ms
+2022-10-21 18:49:56.954 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:49:56.963 -03:00 [INF] HTTP POST /api/v1/Students responded 201 in 8.9874 ms
+2022-10-21 18:50:03.085 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 18:50:03.088 -03:00 [INF] HTTP GET /api/v1/Students responded 200 in 3.9178 ms
+2022-10-21 18:50:23.742 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:50:23.752 -03:00 [INF] HTTP GET /api/v1/Courses responded 200 in 15.6568 ms
+2022-10-21 18:51:55.970 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:51:56.017 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 64.7778 ms
+2022-10-21 18:52:01.973 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:01.977 -03:00 [INF] HTTP GET /api/v1/Courses responded 200 in 4.4754 ms
+2022-10-21 18:52:09.367 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:09.373 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 6.7886 ms
+2022-10-21 18:52:09.727 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:09.734 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 7.1904 ms
+2022-10-21 18:52:10.146 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:10.153 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 7.4968 ms
+2022-10-21 18:52:10.624 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:10.630 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 6.5126 ms
+2022-10-21 18:52:11.012 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:11.018 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 6.5197 ms
+2022-10-21 18:52:11.419 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:11.425 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 6.9491 ms
+2022-10-21 18:52:11.868 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:11.875 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 6.9033 ms
+2022-10-21 18:52:12.302 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:12.306 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 4.1989 ms
+2022-10-21 18:52:16.424 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:16.427 -03:00 [INF] HTTP GET /api/v1/Courses responded 200 in 3.5277 ms
+2022-10-21 18:52:26.663 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:26.666 -03:00 [INF] HTTP POST /api/v1/Courses responded 201 in 4.3284 ms
+2022-10-21 18:52:29.785 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 18:52:29.789 -03:00 [INF] HTTP GET /api/v1/Courses responded 200 in 4.2796 ms

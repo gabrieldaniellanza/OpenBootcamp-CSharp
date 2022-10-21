@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using System.Reflection;
 using UniversityApiBackend.DataAccess;
@@ -56,7 +57,7 @@ namespace UniversityApiBackend.Controllers.V1
 
         [MapToApiVersion(Version.V)]
         [HttpPost]
-        public IActionResult GetToken(UserLogins userLogins)
+        public async Task<IActionResult> GetToken(UserLogins userLogins)
         {
 
             //_logger.LogTrace($"{nameof(AccountsController)} - {nameof(GetToken)} - Trace log level");
@@ -82,14 +83,14 @@ namespace UniversityApiBackend.Controllers.V1
                                 user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase) &&
                                         user.Password.Equals(userLogins.Password, StringComparison.OrdinalIgnoreCase));*/
 
-                var Valid = _context.Users.Any(
+                var Valid = await _context.Users.AnyAsync(
                                 user => user.Name.Equals(userLogins.UserName) &&
                                         user.Password.Equals(userLogins.Password));
 
-                var searchUser = (from user in _context.Users
+                var searchUser = await (from user in _context.Users
                                  where user.Name.Equals(userLogins.UserName) &&
                                         user.Password.Equals(userLogins.Password)
-                                 select user).FirstOrDefault();
+                                 select user).FirstOrDefaultAsync();
 
                 Console.WriteLine("User: {0}", searchUser);
 
@@ -97,7 +98,7 @@ namespace UniversityApiBackend.Controllers.V1
                 {
                     /*var user = Logins.FirstOrDefault(user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase));*/
 
-                    var user = _context.Users.FirstOrDefault(
+                    var user = await _context.Users.FirstOrDefaultAsync(
                         user => 
                             user.Name.Equals(userLogins.UserName) && user.Password.Equals(userLogins.Password));
 
@@ -141,13 +142,13 @@ namespace UniversityApiBackend.Controllers.V1
         [MapToApiVersion(Version.V)]
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public IActionResult GetUsersList()
+        public async Task<IActionResult> GetUsersList()
         {
 
             _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
 
-            var searchUser = (from user in _context.Users
-                              select user);
+            var searchUser = await (from user in _context.Users
+                              select user).FirstOrDefaultAsync();
 
             return Ok(searchUser);
         }

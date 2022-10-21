@@ -35,9 +35,10 @@ namespace UniversityApiBackend.Controllers.V1
             _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
 
             if (_context.Users == null)
-          {
-              return NotFound();
-          }
+              {
+                  return NotFound();
+              }
+
             return await _context.Users.ToListAsync();
         }
 
