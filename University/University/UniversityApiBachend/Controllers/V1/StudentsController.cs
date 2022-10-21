@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
@@ -18,10 +19,14 @@ namespace UniversityApiBackend.Controllers.V1
         // services
         private readonly IStudentsService _studentsService;
 
-        public StudentsController(UniversityDBContext context, IStudentsService studentsService)
+        private readonly ILogger<AccountsController> _logger;
+        //_logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+        public StudentsController(UniversityDBContext context, IStudentsService studentsService, ILogger<AccountsController> logger)
         {
             _context = context;
             _studentsService = studentsService;
+            _logger = logger;
         }
 
         // GET: api/Students
@@ -29,7 +34,9 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-          if (_context.Students == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Students == null)
           {
               return NotFound();
           }
@@ -41,7 +48,9 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-          if (_context.Students == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Students == null)
           {
               return NotFound();
           }
@@ -60,6 +69,8 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("WhitNoCourses")]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudentsWhitNoCourses()
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_studentsService == null)
             {
                 return NotFound();
@@ -80,6 +91,8 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("ForSpecificCourse/{idCourse}")]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudentsForSpecificCourse(int idCourse)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_studentsService == null)
             {
                 return NotFound();
@@ -102,6 +115,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (id != student.Id)
             {
                 return BadRequest();
@@ -135,7 +150,9 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<Student>> PostStudent(Student student)
         {
-          if (_context.Students == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Students == null)
           {
               return Problem("Entity set 'UniversityDBContext.Students'  is null.");
           }
@@ -151,6 +168,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_context.Students == null)
             {
                 return NotFound();

@@ -1,0 +1,179 @@
+2022-10-21 12:40:19.478 -03:00 [VRB] AccountsController - GetToken - Trace log level
+2022-10-21 12:40:19.526 -03:00 [DBG] AccountsController - GetToken - Debug log level
+2022-10-21 12:40:19.527 -03:00 [INF] AccountsController - GetToken - Information log level
+2022-10-21 12:40:19.529 -03:00 [WRN] AccountsController - GetToken - Warning log level
+2022-10-21 12:40:19.530 -03:00 [ERR] AccountsController - GetToken - Warning log level
+2022-10-21 12:40:19.531 -03:00 [FTL] AccountsController - GetToken - Warning log level
+2022-10-21 12:40:21.134 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 400 in 1832.4068 ms
+2022-10-21 12:48:17.358 -03:00 [VRB] AccountsController - GetToken - Trace log level
+2022-10-21 12:48:17.409 -03:00 [DBG] AccountsController - GetToken - Debug log level
+2022-10-21 12:48:17.411 -03:00 [INF] AccountsController - GetToken - Information log level
+2022-10-21 12:48:17.413 -03:00 [WRN] AccountsController - GetToken - Warning log level
+2022-10-21 12:48:17.415 -03:00 [ERR] AccountsController - GetToken - Warning log level
+2022-10-21 12:48:17.416 -03:00 [FTL] AccountsController - GetToken - Warning log level
+2022-10-21 12:48:18.664 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 400 in 1479.4584 ms
+2022-10-21 13:52:39.289 -03:00 [VRB] AccountsController - GetToken - Trace log level
+2022-10-21 13:52:39.329 -03:00 [DBG] AccountsController - GetToken - Debug log level
+2022-10-21 13:52:39.331 -03:00 [INF] AccountsController - GetToken - Information log level
+2022-10-21 13:52:39.333 -03:00 [WRN] AccountsController - GetToken - Warning log level
+2022-10-21 13:52:39.334 -03:00 [ERR] AccountsController - GetToken - Warning log level
+2022-10-21 13:52:39.335 -03:00 [FTL] AccountsController - GetToken - Warning log level
+2022-10-21 13:52:39.933 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 13:52:39.938 -03:00 [INF] warn: 21/10/2022 13:52:39.938 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 13:52:40.133 -03:00 [INF] info: 21/10/2022 13:52:40.133 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 13:52:40.561 -03:00 [INF] info: 21/10/2022 13:52:40.561 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (31ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [Users] AS [u]
+              WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+2022-10-21 13:52:40.624 -03:00 [INF] info: 21/10/2022 13:52:40.624 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 13:52:40.697 -03:00 [INF] info: 21/10/2022 13:52:40.697 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 13:52:40.855 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1754.4178 ms
+2022-10-21 15:57:30.272 -03:00 [INF] AccountsController - AccountsController - Function Called
+2022-10-21 15:57:30.903 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 15:57:30.908 -03:00 [INF] warn: 21/10/2022 15:57:30.908 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 15:57:31.105 -03:00 [INF] info: 21/10/2022 15:57:31.105 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 15:57:31.542 -03:00 [INF] info: 21/10/2022 15:57:31.542 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (30ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [Users] AS [u]
+              WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+2022-10-21 15:57:31.604 -03:00 [INF] info: 21/10/2022 15:57:31.604 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 15:57:31.678 -03:00 [INF] info: 21/10/2022 15:57:31.678 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 15:57:31.842 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1759.1615 ms
+2022-10-21 15:58:17.228 -03:00 [INF] AccountsController - AccountsController - Function Called
+2022-10-21 15:58:17.235 -03:00 [INF] info: 21/10/2022 15:58:17.235 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 15:58:17.291 -03:00 [INF] info: 21/10/2022 15:58:17.291 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+2022-10-21 15:58:17.325 -03:00 [INF] HTTP GET /api/v1/Accounts/GetUsersList responded 200 in 365.2036 ms
+2022-10-21 16:04:52.431 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 16:04:53.056 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 16:04:53.061 -03:00 [INF] warn: 21/10/2022 16:04:53.061 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 16:04:53.254 -03:00 [INF] info: 21/10/2022 16:04:53.254 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 16:04:53.698 -03:00 [INF] info: 21/10/2022 16:04:53.698 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (31ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [Users] AS [u]
+              WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+2022-10-21 16:04:53.759 -03:00 [INF] info: 21/10/2022 16:04:53.759 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 16:04:53.831 -03:00 [INF] info: 21/10/2022 16:04:53.831 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 16:04:53.988 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 53772.1250 ms
+2022-10-21 16:05:11.532 -03:00 [INF] AccountsController - GetUsersList - Function Called
+2022-10-21 16:05:11.539 -03:00 [INF] info: 21/10/2022 16:05:11.539 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 16:05:11.591 -03:00 [INF] info: 21/10/2022 16:05:11.591 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+2022-10-21 16:05:11.624 -03:00 [INF] HTTP GET /api/v1/Accounts/GetUsersList responded 200 in 3873.8807 ms
+2022-10-21 16:05:49.507 -03:00 [INF] CategoriesController - GetCategories - Function Called
+2022-10-21 16:05:49.550 -03:00 [INF] info: 21/10/2022 16:05:49.550 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 16:05:49.559 -03:00 [INF] info: 21/10/2022 16:05:49.559 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+      FROM [Categories] AS [c]
+2022-10-21 16:05:49.572 -03:00 [INF] HTTP GET /api/v1/Categories responded 200 in 74.9463 ms
+2022-10-21 17:56:14.843 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 17:56:14.848 -03:00 [INF] info: 21/10/2022 17:56:14.848 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 17:56:14.857 -03:00 [INF] info: 21/10/2022 17:56:14.857 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [Users] AS [u]
+              WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+2022-10-21 17:56:14.860 -03:00 [INF] info: 21/10/2022 17:56:14.860 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 17:56:14.862 -03:00 [INF] info: 21/10/2022 17:56:14.862 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__userLogins_UserName_0='Gabriel' (Size = 50), @__userLogins_Password_1='1234' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[IsDeleted], [u].[LastName], [u].[Name], [u].[Password], [u].[Rol], [u].[UpdatedAt], [u].[UpdatedBy]
+      FROM [Users] AS [u]
+      WHERE ([u].[Name] = @__userLogins_UserName_0) AND ([u].[Password] = @__userLogins_Password_1)
+2022-10-21 17:56:14.865 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 23.2120 ms
+2022-10-21 17:56:30.073 -03:00 [INF] CoursesController - MoveNext - Function Called
+2022-10-21 17:56:30.076 -03:00 [INF] info: 21/10/2022 17:56:30.076 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 17:56:30.084 -03:00 [INF] info: 21/10/2022 17:56:30.084 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Description], [c].[IsDeleted], [c].[Level], [c].[Name], [c].[ShortDescription], [c].[UpdatedAt], [c].[UpdatedBy]
+      FROM [Courses] AS [c]
+2022-10-21 17:56:30.087 -03:00 [INF] HTTP GET /api/v1/Courses responded 200 in 29.3434 ms
+2022-10-21 17:56:42.711 -03:00 [INF] StudentsController - MoveNext - Function Called
+2022-10-21 17:56:42.713 -03:00 [INF] info: 21/10/2022 17:56:42.713 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.8 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2022-10-21 17:56:42.720 -03:00 [INF] info: 21/10/2022 17:56:42.720 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[CreatedAt], [s].[CreatedBy], [s].[DeletedAt], [s].[DeletedBy], [s].[Dob], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[UpdatedAt], [s].[UpdatedBy]
+      FROM [Students] AS [s]
+2022-10-21 17:56:42.723 -03:00 [INF] HTTP GET /api/v1/Students responded 200 in 15.8978 ms
+2022-10-21 18:02:12.563 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 18:02:13.193 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 18:02:14.086 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1694.8770 ms
+2022-10-21 18:02:34.945 -03:00 [INF] AccountsController - GetUsersList - Function Called
+2022-10-21 18:02:35.032 -03:00 [INF] HTTP GET /api/v1/Accounts/GetUsersList responded 200 in 198.9049 ms
+2022-10-21 18:09:20.803 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 18:09:21.443 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 18:09:22.356 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1728.5924 ms
+2022-10-21 18:09:41.696 -03:00 [INF] AccountsController - GetUsersList - Function Called
+2022-10-21 18:09:41.782 -03:00 [INF] HTTP GET /api/v1/Accounts/GetUsersList responded 200 in 200.7778 ms
+2022-10-21 18:11:36.994 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 18:11:37.629 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 18:11:38.540 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1722.0204 ms
+2022-10-21 18:14:46.508 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 18:14:47.125 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 18:14:48.363 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 2032.7511 ms
+2022-10-21 18:17:37.592 -03:00 [INF] AccountsController - GetToken - Function Called
+2022-10-21 18:17:38.292 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2022-10-21 18:17:39.208 -03:00 [INF] HTTP POST /api/v1/Accounts/GetToken responded 200 in 1790.3675 ms

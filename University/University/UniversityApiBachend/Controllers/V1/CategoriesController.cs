@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Serilog.Parsing;
+using System.Reflection;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
@@ -18,10 +20,17 @@ namespace UniversityApiBackend.Controllers.V1
         // services
         private readonly ICategoriesService _categoriesService;
 
-        public CategoriesController(UniversityDBContext context, ICategoriesService categoriesService)
+        private readonly ILogger<AccountsController> _logger;
+        //_logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+        public CategoriesController(
+            UniversityDBContext context, 
+            ICategoriesService categoriesService,
+            ILogger<AccountsController> logger)
         {
             _context = context;
             _categoriesService = categoriesService;
+            _logger = logger;
         }
 
         // GET: api/Categories
@@ -29,10 +38,13 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
-          if (_context.Categories == null)
-          {
-              return NotFound();
-          }
+
+            _logger.LogInformation($"{nameof(CategoriesController)} - {nameof(GetCategories)} - Function Called");
+
+            if (_context.Categories == null)
+            {
+                return NotFound();
+            }
             return await _context.Categories.ToListAsync();
         }
 
@@ -41,7 +53,9 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(int id)
         {
-          if (_context.Categories == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Categories == null)
           {
               return NotFound();
           }
@@ -62,6 +76,9 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> PutCategory(int id, Category category)
         {
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (id != category.Id)
             {
                 return BadRequest();
@@ -95,7 +112,10 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
-          if (_context.Categories == null)
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Categories == null)
           {
               return Problem("Entity set 'UniversityDBContext.Categories'  is null.");
           }
@@ -111,6 +131,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_context.Categories == null)
             {
                 return NotFound();

@@ -9,8 +9,23 @@ using UniversityApiBackend.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+// CONFIGURAR SERILOG
+builder.Host.UseSerilog((hostBuilderContext,loggerConf) =>
+{
+    loggerConf
+        .WriteTo.Console()
+        .WriteTo.Debug()
+        .ReadFrom.Configuration(hostBuilderContext.Configuration);
+});
+
+
+
 
 // 2. conexion con la base de datos
 const string CONNECTIONNAME = "UniversityDB";
@@ -111,8 +126,6 @@ var app = builder.Build();
 //
 var apiversiondescriptionprovider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
-
-
 // 02. IDIOMAS SOPORTADOS
 
 var supportedCultures = new[] { "en-US", "es-ES", "fr-FR", "de-DE" }; // ingles de EEUU, español de españa, frances
@@ -142,6 +155,9 @@ if (app.Environment.IsDevelopment())
         }
     });
 }
+
+// USAR EL LOGIN DE SERILOG
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

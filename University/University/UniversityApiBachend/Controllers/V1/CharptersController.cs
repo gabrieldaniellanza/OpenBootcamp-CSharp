@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
@@ -18,10 +19,15 @@ namespace UniversityApiBackend.Controllers.V1
         // services
         private readonly ICharptersService _charptersService;
 
-        public CharptersController(UniversityDBContext context, ICharptersService charptersService)
+
+        private readonly ILogger<AccountsController> _logger;
+
+
+        public CharptersController(UniversityDBContext context, ICharptersService charptersService, ILogger<AccountsController> logger)
         {
             _context = context;
             _charptersService = charptersService;
+            _logger = logger;
         }
 
         // GET: api/Charpters
@@ -29,7 +35,10 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Charpter>>> GetCharpters()
         {
-          if (_context.Charpters == null)
+            
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Charpters == null)
           {
               return NotFound();
           }

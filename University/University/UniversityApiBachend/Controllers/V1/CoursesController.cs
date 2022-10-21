@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
@@ -17,11 +18,14 @@ namespace UniversityApiBackend.Controllers.V1
 
         // services
         private readonly ICoursesService _coursesService;
+        private readonly ILogger<AccountsController> _logger;
+        //_logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
 
-        public CoursesController(UniversityDBContext context, ICoursesService coursesService)
+        public CoursesController(UniversityDBContext context, ICoursesService coursesService, ILogger<AccountsController> logger)
         {
             _context = context;
             _coursesService = coursesService;
+            _logger = logger;
         }
 
         // GET: api/Courses
@@ -29,7 +33,9 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
         {
-          if (_context.Courses == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Courses == null)
           {
               return NotFound();
           }
@@ -41,7 +47,9 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("{id}")]
         public async Task<ActionResult<Course>> GetCourse(int id)
         {
-          if (_context.Courses == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Courses == null)
           {
               return NotFound();
           }
@@ -61,6 +69,8 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("ByCategory/{idCategory}")]
         public async Task<ActionResult<IEnumerable<Course>>> GetCoursesByCategory(int idCategory)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_coursesService == null)
             {
                 return NotFound();
@@ -81,6 +91,8 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("ForSpecificStudent/{idStudent}")]
         public async Task<ActionResult<IEnumerable<Course>>> GetCoursesForSpecificStudent(int idStudent)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_coursesService == null)
             {
                 return NotFound();
@@ -101,6 +113,8 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("WithOutCharpter")]
         public async Task<ActionResult<IEnumerable<Course>>> GetCoursesWithOutCharpter()
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_coursesService == null)
             {
                 return NotFound();
@@ -124,6 +138,9 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> PutCourse(int id, Course course)
         {
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (id != course.Id)
             {
                 return BadRequest();
@@ -157,7 +174,10 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<Course>> PostCourse(Course course)
         {
-          if (_context.Courses == null)
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Courses == null)
           {
               return Problem("Entity set 'UniversityDBContext.Courses'  is null.");
           }
@@ -173,6 +193,9 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_context.Courses == null)
             {
                 return NotFound();

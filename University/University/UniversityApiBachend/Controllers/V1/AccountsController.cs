@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Reflection;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
@@ -20,11 +21,18 @@ namespace UniversityApiBackend.Controllers.V1
 
         private readonly UniversityDBContext _context;
 
-        public AccountsController(UniversityDBContext context, JwtSettings jwtSettings, IStringLocalizer<AccountsController> stringLocalizer)
+        private readonly ILogger<AccountsController> _logger;
+
+        public AccountsController(
+            UniversityDBContext context, 
+            JwtSettings jwtSettings, 
+            IStringLocalizer<AccountsController> stringLocalizer, 
+            ILogger<AccountsController> logger)
         {
             _context = context;
             _jwtSettings = jwtSettings;
             _stringLocalizer = stringLocalizer;
+            _logger = logger;
 
         }
 
@@ -46,11 +54,20 @@ namespace UniversityApiBackend.Controllers.V1
             }
         };
 
-
         [MapToApiVersion(Version.V)]
         [HttpPost]
         public IActionResult GetToken(UserLogins userLogins)
         {
+
+            //_logger.LogTrace($"{nameof(AccountsController)} - {nameof(GetToken)} - Trace log level");
+            //_logger.LogDebug($"{nameof(AccountsController)} - {nameof(GetToken)} - Debug log level");
+            //_logger.LogInformation($"{nameof(AccountsController)} - {nameof(GetToken)} - Information log level");
+            //_logger.LogWarning($"{nameof(AccountsController)} - {nameof(GetToken)} - Warning log level");
+            //_logger.LogError($"{nameof(AccountsController)} - {nameof(GetToken)} - Error log level");
+            //_logger.LogCritical($"{nameof(AccountsController)} - {nameof(GetToken)} - Critical log level");
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             try
             {
                 var Token = new UserTokens();
@@ -113,9 +130,9 @@ namespace UniversityApiBackend.Controllers.V1
                 });
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("GetToken Error");
+                throw new Exception("GetToken Error", ex);
             }
 
         }
@@ -126,6 +143,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public IActionResult GetUsersList()
         {
+
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
 
             var searchUser = (from user in _context.Users
                               select user);

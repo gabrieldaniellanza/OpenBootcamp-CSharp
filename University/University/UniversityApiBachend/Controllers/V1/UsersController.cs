@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Models.DataModels;
 
@@ -16,9 +17,13 @@ namespace UniversityApiBackend.Controllers.V1
 
         //private readonly IUserService? _userService;
 
-        public UsersController(UniversityDBContext context)
+        private readonly ILogger<AccountsController> _logger;
+        //_logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+        public UsersController(UniversityDBContext context, ILogger<AccountsController> logger)
         {
             _context = context;
+            _logger = logger;
             //_userService = userService;
         }
 
@@ -27,7 +32,9 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-          if (_context.Users == null)
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
+            if (_context.Users == null)
           {
               return NotFound();
           }
@@ -39,6 +46,8 @@ namespace UniversityApiBackend.Controllers.V1
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_context.Users == null)
             {
                 return NotFound();
@@ -61,6 +70,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (id != user.Id)
             {
                 return BadRequest();
@@ -94,6 +105,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<User>> PostUser(User user)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_context.Users == null)
             {
                 return Problem("Entity set 'UniversityDBContext.Users'  is null.");
@@ -111,6 +124,8 @@ namespace UniversityApiBackend.Controllers.V1
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteUser(int id)
         {
+            _logger.LogInformation($"{this.GetType().Name} - {MethodBase.GetCurrentMethod().Name} - Function Called");
+
             if (_context.Users == null)
             {
                 return NotFound();

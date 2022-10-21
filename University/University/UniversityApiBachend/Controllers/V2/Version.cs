@@ -1,4 +1,6 @@
-﻿namespace UniversityApiBackend.Controllers.V2
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+
+namespace UniversityApiBackend.Controllers.V2
 {
     public static class Version
     {
